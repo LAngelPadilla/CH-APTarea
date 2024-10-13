@@ -17,6 +17,19 @@
   
 //   getUserData();
 
+function pedirDatos()
+{
+    let salida = "";
+    let nombre = prompt("Ingrese su nombre");
+    let edad = prompt("Ingrese su edad");
+    let pelicula = prompt("Ingrese su pelicula favorita");
+    salida = nombre + " tiene " + edad + " años y su pelicula favorita es " + pelicula;
+    return salida;
+}
+
+console.log(pedirDatos());
+
+
 //Highest Number
 
 // function findHighestNumber() {
@@ -60,3 +73,59 @@
 //   } else {
 //     console.log(""${userInput}" is not a palindrome.");
 //   }
+
+//Suma resistencias
+
+function sumaResist(resist)
+{
+    let suma = 0;
+    for (let i = 0; i < resist.length; i++)
+        suma += Math.abs(resist[i]);
+    return suma;
+}
+
+let resistencias = [-1, 10, 5, 14];
+
+console.log(sumaResist(resistencias));
+
+
+// function arrayMultiples(number, length) {
+//     const multiples = [];
+//     for (let i = 1; i <= length; i++) {
+//     multiples.push(number * i);
+//         }
+//         return multiples;
+//     }
+
+// console.log(arrayMultiples(2, 10));
+// console.log(arrayMultiples(17, 6));
+
+function generarMultiplos(numero, multiplos)
+{
+    let respuesta = new Array(multiplos);
+    for(let i=1; i<=multiplos; i++)
+    {
+        respuesta[i-1] = numero * i;
+    }
+    return respuesta;
+}
+
+let numero = 8;
+let multiplos = 10;
+
+console.log(generarMultiplos(numero, multiplos));
+
+
+function secretSociety(arreglo)
+{
+    let respuesta = "";
+    for (let i = 0; i < arreglo.length; i++)
+    {
+        respuesta += arreglo[i][0];
+    }
+    return respuesta;
+}
+
+let nombres = ["Luis", "Angel", "Lalo", "Tommy"];
+
+console.log(secretSociety(nombres));
