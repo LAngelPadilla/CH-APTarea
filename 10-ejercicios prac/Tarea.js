@@ -1,33 +1,16 @@
 // //User profile
 
-// function getUserData() {
-//     let Nombre = prompt("¿Cómo te llamas?");
-//     let Edad = prompt("¿Que edad tienes?");
-//     let pelicula = prompt("¿Cúal es tu pelicula favorita?");
-    
-  
-   
-  
-//     // Display the user's data
-//     console.log(`Nombre: ${Nombre}`);
-//     console.log(`Edad: ${Edad}`);
-//     console.log(`The film "${pelicula}" is one of my favorites.`);
-    
-//   }
-  
-//   getUserData();
-
-function pedirDatos()
+function userProfile()
 {
     let salida = "";
-    let nombre = prompt("Ingrese su nombre");
-    let edad = prompt("Ingrese su edad");
-    let pelicula = prompt("Ingrese su pelicula favorita");
+    let nombre = prompt("¿Cómo te llamas");
+    let edad = prompt("¿Que edad tienes?");
+    let pelicula = prompt("¿Cual es tu pelicula favorita");
     salida = nombre + " tiene " + edad + " años y su pelicula favorita es " + pelicula;
     return salida;
 }
 
-console.log(pedirDatos());
+console.log(userProfile());
 
 
 //Highest Number
@@ -88,34 +71,7 @@ let resistencias = [-1, 10, 5, 14];
 
 console.log(sumaResist(resistencias));
 
-
-// function arrayMultiples(number, length) {
-//     const multiples = [];
-//     for (let i = 1; i <= length; i++) {
-//     multiples.push(number * i);
-//         }
-//         return multiples;
-//     }
-
-// console.log(arrayMultiples(2, 10));
-// console.log(arrayMultiples(17, 6));
-
-function generarMultiplos(numero, multiplos)
-{
-    let respuesta = new Array(multiplos);
-    for(let i=1; i<=multiplos; i++)
-    {
-        respuesta[i-1] = numero * i;
-    }
-    return respuesta;
-}
-
-let numero = 8;
-let multiplos = 10;
-
-console.log(generarMultiplos(numero, multiplos));
-
-
+// Secret Society
 function secretSociety(arreglo)
 {
     let respuesta = "";
@@ -129,3 +85,21 @@ function secretSociety(arreglo)
 let nombres = ["Luis", "Angel", "Lalo", "Tommy"];
 
 console.log(secretSociety(nombres));
+
+// Mult Numbers
+function generarMultiplos(numero, multiplos)
+{
+    let respuesta = new Array(multiplos);
+    for(let i=1; i<=multiplos; i++)
+    {
+        respuesta[i-1] = numero * i;
+    }
+    return respuesta;
+}
+
+let numero = 2;
+let multiplos = 10;
+
+console.log(generarMultiplos(numero, multiplos));
+
+
